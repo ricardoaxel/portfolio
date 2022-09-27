@@ -19,6 +19,7 @@
   "author": "Vishwas",
   "license": "MIT",
   "dependencies": {
+    "@emotion/react": "^11.10.4",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
@@ -57,7 +58,6 @@
     "webpack-dev-server": "^3.11.2",
     "webpack-merge": "^5.7.3"
   },
-
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json}": [
       "eslint --fix"
