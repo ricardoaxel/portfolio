@@ -6,7 +6,7 @@ export const App = () => {
   return (
     <>
       <h1>
-        Hellso Reacti - {process.env.NODE_ENV} {process.env.name}
+        Hellssdfso Reacti - {process.env.NODE_ENV} {process.env.name}
       </h1>
       <ClikCounter />
       <img src={image} alt={"asdad"} />
