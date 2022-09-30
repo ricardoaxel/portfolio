@@ -40,10 +40,3 @@ export const style = () => {
     }
   `
 }
-
-export const imageStyles = css`
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  -webkit-filter: grayscale(100%);
-`

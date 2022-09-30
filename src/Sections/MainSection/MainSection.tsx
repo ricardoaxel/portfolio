@@ -7,7 +7,7 @@ export const MainSection = () => {
       <div css={style}>
         <div className="centerContainer">
           <h3>Hi, my name is Ricardo Axel</h3>
-          <p id="im">I'm a </p>
+          <p id="im">{`I'm a `}</p>
           <div id="reactSec">
             <img id="reactLogo" src={reactLogo} alt="" />
             <h1>React Developer</h1>
