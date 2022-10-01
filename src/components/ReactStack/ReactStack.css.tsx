@@ -3,8 +3,6 @@ import { css } from "@emotion/react"
 export const style = () => {
   return css`
     color: white;
-    /* background-color: #ffffff19; */
-    border-radius: 0.5rem;
     width: 100%;
     height: 100%;
     display: flex;

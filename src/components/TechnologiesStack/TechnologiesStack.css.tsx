@@ -4,9 +4,8 @@ export const style = () => {
   return css`
     color: white;
     border-radius: 0.5rem;
-    /* width: 100%;
+    width: 100%;
     height: 100%;
-    background-color: blue; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -58,16 +57,12 @@ export const style = () => {
           :hover {
             background: #83f6fcbe;
           }
-          .imgContainer {
-            background-color: transparent;
-            width: 1rem;
-            height: 1rem;
-            margin-right: 0.5rem;
-            img {
-              width: 100%;
-              height: auto;
-            }
-          }
+        }
+        img {
+          width: 1rem;
+          height: 1rem;
+          background-size: contain;
+          margin-right: 0.5rem;
         }
       }
     }

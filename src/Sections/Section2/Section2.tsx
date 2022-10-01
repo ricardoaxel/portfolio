@@ -2,6 +2,7 @@ import { ParallaxLayer } from "@react-spring/parallax"
 import { CardContainer, ReactStack } from "../../components"
 import { style } from "./Section2.css"
 import { FrontendDevTools } from "../../components/FrontendDevTools/FrontendDevTools"
+import { TechnologiesStack } from "../../components/TechnologiesStack/TechnologiesStack"
 export const Section2 = () => {
   return (
     <div css={style}>
@@ -10,13 +11,14 @@ export const Section2 = () => {
         speed={1}
         style={{
           display: "flex",
-          // background: "red",
-          justifyContent: "center",
+          width: "38.5%",
+          marginLeft: "31%",
           alignItems: "center",
+          position: "absolute",
         }}
       >
         <CardContainer className={"card2"}>
-          <ReactStack />
+          <ReactStack className={"contentArea"} />
         </CardContainer>
       </ParallaxLayer>
 
@@ -25,40 +27,30 @@ export const Section2 = () => {
         speed={2}
         style={{
           display: "flex",
-          // background: "red",
+          width: "25%",
+          marginLeft: "3%",
           alignItems: "center",
+          position: "absolute",
         }}
       >
-        <CardContainer className={"smallcards"} id={"card1"}>
-          {/* asdasd
-          <ul>
-            <li>asdads</li>
-            <li>asdads</li>
-            <li>asdads</li>
-            <li>asdads</li>
-            <li>asdads</li>
-            <li>asdads</li>
-            <li>asdads</li>
-            <li>asdads</li>
-            <li>asdads</li>
-            <li>asdads</li>
-            <li>asdads</li>
-            <li>asdads</li>
-            <li>asdads</li>
-            <li>asdads</li>
-            <li>asdads</li>
-            <li>asdads</li>
-            <li>asdads</li>
-            <li>asdads</li>
-            <li>asdads</li>
-            <li>asdads</li>
-            <li>asdads</li>
-            <li>asdads</li>
-          </ul> */}
-          <FrontendDevTools />
-        </CardContainer>
         <CardContainer className={"smallcards "} id={"card3"}>
-          Card 3
+          <TechnologiesStack className={"contentArea"} />
+        </CardContainer>
+      </ParallaxLayer>
+
+      <ParallaxLayer
+        offset={1}
+        speed={2}
+        style={{
+          display: "flex",
+          width: "25%",
+          alignItems: "center",
+          marginLeft: "72%",
+          position: "absolute",
+        }}
+      >
+        <CardContainer className={"smallcards "} id={"card3"}>
+          <FrontendDevTools className={"contentArea"} />
         </CardContainer>
       </ParallaxLayer>
     </div>

@@ -1,22 +1,47 @@
 import { style } from "./FrontendDevTools.css"
-import { reactLogo } from "../../assets/Images"
+import {
+  AxiosLogo,
+  apiLogo,
+  bootstrapLogo,
+  cypressLogo,
+  emotionLogo,
+  eslintLogo,
+  googlemapsLogo,
+  jestLogo,
+  jspdfLogo,
+  materialuiLogo,
+  npmLogo,
+  plotlyLogo,
+  postmanLogo,
+  prettierLogo,
+  rbdndLogo,
+  rechartsLogo,
+  reactLogo,
+  reduxLogo,
+  sassLogo,
+  webpackLogo,
+} from "../../assets/Images"
 
 const stack = [
-  "Axios",
-  "Redux",
-  "API Fetch",
-  "ESLint",
-  "Prettier",
-  "Babel",
-  "SASS",
-  "Material UI",
-  "Emotion",
-  "Webpack",
-  "Jest",
-  "Cypress",
-  "PostMan",
-  "Bootstrap",
-  "npm",
+  { name: "axios", logo: AxiosLogo },
+  { name: "Redux", logo: reduxLogo },
+  { name: "API Fetch", logo: apiLogo },
+  { name: "ESLint", logo: eslintLogo },
+  { name: "Prettier", logo: prettierLogo },
+  { name: "SASS", logo: sassLogo },
+  { name: "Material UI", logo: materialuiLogo },
+  { name: "Emotion", logo: emotionLogo },
+  { name: "Webpack", logo: webpackLogo },
+  { name: "Jest", logo: jestLogo },
+  { name: "Cypress", logo: cypressLogo },
+  { name: "PostMan", logo: postmanLogo },
+  { name: "Bootstrap", logo: bootstrapLogo },
+  { name: "npm", logo: npmLogo },
+  { name: "Plotly", logo: plotlyLogo },
+  { name: "Recharts", logo: rechartsLogo },
+  { name: "Google Maps", logo: googlemapsLogo },
+  { name: "jsPDF", logo: jspdfLogo },
+  { name: "react-beautiful-dnd", logo: rbdndLogo },
 ]
 
 export const FrontendDevTools = ({ children, className, id }) => {
@@ -29,8 +54,10 @@ export const FrontendDevTools = ({ children, className, id }) => {
           {stack.map((tec, index) => (
             <li key={index}>
               <div>
-                <img src={reactLogo} alt="" />
-                {tec}
+                <div className="imgContainer">
+                  <img src={tec.logo} />
+                </div>
+                {tec.name}
               </div>
             </li>
           ))}
