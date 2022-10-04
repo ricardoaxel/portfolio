@@ -1,6 +1,16 @@
 import AxiosLogo from "./axios.png"
 import apiLogo from "./api.png"
+import backendLogo from "./backend.png"
 import bootstrapLogo from "./bootstrap.svg"
+import cssLogo from "./css.png"
+import tsLogo from "./ts.png"
+import jsLogo from "./js.png"
+import jsonLogo from "./json.png"
+import gitLogo from "./git.png"
+import githubLogo from "./github.png"
+import nodejsLogo from "./nodejs.png"
+import firebaseLogo from "./firebase.png"
+import ubuntuLogo from "./ubuntu.png"
 import cypressLogo from "./cypress.png"
 import emotionLogo from "./emotion.png"
 import eslintLogo from "./eslint.png"
@@ -19,10 +29,12 @@ import reactLogo from "./reactLogo.svg"
 import reduxLogo from "./redux.svg"
 import sassLogo from "./sass.png"
 import webpackLogo from "./webpack.png"
+import htmlLogo from "./html5.png"
 
 export {
   AxiosLogo,
   apiLogo,
+  backendLogo,
   bootstrapLogo,
   cypressLogo,
   emotionLogo,
@@ -42,4 +54,14 @@ export {
   reduxLogo,
   sassLogo,
   webpackLogo,
+  cssLogo,
+  tsLogo,
+  jsLogo,
+  jsonLogo,
+  gitLogo,
+  githubLogo,
+  nodejsLogo,
+  firebaseLogo,
+  ubuntuLogo,
+  htmlLogo,
 }

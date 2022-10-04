@@ -22,8 +22,10 @@
     "@emotion/babel-preset-css-prop": "^11.10.0",
     "@emotion/react": "^11.10.4",
     "@react-spring/parallax": "^9.5.5",
+    "@react-spring/types": "^9.5.5",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-icons": "^4.4.0",
     "react-spring": "^9.5.5"
   },
   "devDependencies": {

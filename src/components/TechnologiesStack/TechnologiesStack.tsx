@@ -1,110 +1,16 @@
 import { style } from "./TechnologiesStack.css"
-import {
-  AxiosLogo,
-  apiLogo,
-  bootstrapLogo,
-  cypressLogo,
-  emotionLogo,
-  eslintLogo,
-  googlemapsLogo,
-  jestLogo,
-  jspdfLogo,
-  materialuiLogo,
-  npmLogo,
-  plotlyLogo,
-  postmanLogo,
-  prettierLogo,
-  rbdndLogo,
-  rechartsLogo,
-  reactLogo,
-  reduxLogo,
-  sassLogo,
-  webpackLogo,
-} from "../../assets/Images"
-
-const stack = {
-  technologies: [
-    {
-      name: "HTML5",
-      logo: AxiosLogo,
-    },
-    {
-      name: "CSS",
-      logo: AxiosLogo,
-    },
-    {
-      name: "TypeScript",
-      logo: AxiosLogo,
-    },
-    {
-      name: "JavaScript",
-      logo: AxiosLogo,
-    },
-    {
-      name: "JSON",
-      logo: AxiosLogo,
-    },
-  ],
-  other: [
-    {
-      name: "Git",
-      logo: AxiosLogo,
-    },
-    {
-      name: "Github",
-      logo: AxiosLogo,
-    },
-    {
-      name: "NodeJS",
-      logo: AxiosLogo,
-    },
-    {
-      name: "Firebase",
-      logo: AxiosLogo,
-    },
-    {
-      name: "Firebase",
-      logo: AxiosLogo,
-    },
-    {
-      name: "Basic backend understanding",
-      logo: AxiosLogo,
-    },
-    {
-      name: "Ubuntu",
-      logo: AxiosLogo,
-    },
-  ],
-}
-
-export const TechnologiesStack = ({ children, className, id }) => {
+import { ItemsList } from ".."
+import { stack } from "./stack"
+export const TechnologiesStack = ({ className }: { className: string }) => {
   return (
-    <>
-      <div css={style} className={className} id={id}>
-        <h2>Tecnologies</h2>
-        <ul className="stackList">
-          {stack.technologies.map((tec, index) => (
-            <li key={index}>
-              <div>
-                <img src={tec.logo} />
-                {tec.name}
-              </div>
-            </li>
-          ))}
-        </ul>
-        {/*  */}
-        <h2>Other Tools</h2>
-        <ul className="stackList">
-          {stack.other.map((tec, index) => (
-            <li key={index}>
-              <div>
-                <img src={tec.logo} />
-                {tec.name}
-              </div>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </>
+    <div css={style} className={className}>
+      {/*  Technologies */}
+      <h2>Tecnologies</h2>
+      <ItemsList stack={stack.technologies} />
+
+      {/*  Other tools */}
+      <h2>Other Tools</h2>
+      <ItemsList stack={stack.other} />
+    </div>
   )
 }

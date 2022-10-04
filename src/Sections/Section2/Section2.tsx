@@ -33,7 +33,7 @@ export const Section2 = () => {
           position: "absolute",
         }}
       >
-        <CardContainer className={"smallcards "} id={"card3"}>
+        <CardContainer>
           <TechnologiesStack className={"contentArea"} />
         </CardContainer>
       </ParallaxLayer>
@@ -49,7 +49,7 @@ export const Section2 = () => {
           position: "absolute",
         }}
       >
-        <CardContainer className={"smallcards "} id={"card3"}>
+        <CardContainer>
           <FrontendDevTools className={"contentArea"} />
         </CardContainer>
       </ParallaxLayer>

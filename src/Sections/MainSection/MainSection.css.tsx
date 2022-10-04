@@ -6,8 +6,6 @@ export const style = () => {
     background-color: #030305c9;
     color: #fafafa;
     width: 100%;
-    /* width: calc(100% - 2rem);
-    margin: 1rem; */
     height: 100%;
     display: flex;
     text-align: center;
@@ -15,13 +13,15 @@ export const style = () => {
     flex-direction: column;
     align-items: center;
     border-radius: 0.5rem;
+
     .centerContainer {
       display: flex;
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
-      /* background: red; */
-
+      padding-bottom: 8rem;
+      /* background-color: red; */
+      height: 8rem;
       #im {
         margin-top: 0.5rem;
       }

@@ -1,5 +1,6 @@
 import { css, Global } from "@emotion/react"
 import { Style } from "./GeneralLayout.css"
+import { ReactNode } from "react"
 
 const cardCss = {
   self: css({
@@ -9,7 +10,11 @@ const cardCss = {
     color: "#8758FF",
   }),
 }
-export const GeneralLayout = ({ children }) => {
+
+interface Props {
+  children: ReactNode
+}
+export const GeneralLayout = ({ children }: Props) => {
   return (
     <>
       <Global styles={Style} />

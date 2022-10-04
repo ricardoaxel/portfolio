@@ -1,9 +1,15 @@
 import { style } from "./CardContainer.css"
+import { ReactNode } from "react"
 
-export const CardContainer = ({ children, className, id }) => {
+interface Props {
+  children: ReactNode
+  className?: string
+}
+
+export const CardContainer = ({ children, className }: Props) => {
   return (
     <>
-      <div css={style} className={className} id={id}>
+      <div css={style} className={className}>
         {children}
       </div>
     </>

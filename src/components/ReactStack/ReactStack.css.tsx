@@ -2,15 +2,10 @@ import { css } from "@emotion/react"
 
 export const style = () => {
   return css`
-    color: white;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     h1 {
       text-align: center;
       color: #83f6fc;
+      margin-top: 1rem;
       margin-bottom: 2rem;
     }
     .stackList {
@@ -35,17 +30,16 @@ export const style = () => {
         }
       }
     }
+
     #bottomSec {
-      margin-top: -0.25rem;
+      margin-top: 0.5rem;
       display: flex;
       justify-content: space-around;
-
-      /* background-color: red; */
+      margin-bottom: 1rem;
       .botsubSec {
         display: flex;
         flex-direction: column;
         align-items: center;
-
         h2 {
           margin-bottom: 0.5rem;
         }

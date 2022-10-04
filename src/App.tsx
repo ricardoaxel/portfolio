@@ -1,15 +1,15 @@
 import { GeneralLayout } from "./Layouts/GeneralLayout"
-import { MainSection } from "./Sections/MainSection/MainSection"
+import { MainSection, Section2, Menu } from "./Sections"
 import { Parallax, ParallaxLayer } from "@react-spring/parallax"
 import { me } from "./assets/Images"
 import { useRef } from "react"
-import { Section2 } from "./Sections/Section2/Section2"
 
 export const App = () => {
-  const ref = useRef()
+  const ref = useRef<HTMLInputElement>()
   return (
     <GeneralLayout>
       <Parallax pages={4} ref={ref}>
+        {/* Background */}
         <ParallaxLayer
           style={{
             backgroundImage: `url(${me})`,
@@ -19,7 +19,6 @@ export const App = () => {
             filter: "grayscale(100%) blur(0px)",
           }}
           factor={2}
-          onClick={() => ref.current.scrollTo(3)}
         >
           <div
             style={{
@@ -29,12 +28,29 @@ export const App = () => {
             }}
           ></div>
         </ParallaxLayer>
-        {/* Section 1 */}
-        <ParallaxLayer speed={2} offset={0} factor={1}>
-          <MainSection />
-        </ParallaxLayer>
-        {/* Section 2 */}
 
+        {/* Section 1 */}
+
+        <ParallaxLayer speed={2} offset={0} factor={1}>
+          <MainSection onClick={(page) => ref!.current!.scrollTo(page)} />
+          {/* <div onClick={() => ref.current.scrollTo(1)}>fdsfsf</div> */}
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          speed={2}
+          factor={1}
+          offset={3}
+          sticky={{ start: 0.55, end: 4 }}
+          style={{
+            // background: "red",
+            position: "absolute",
+            height: "8rem",
+          }}
+        >
+          <Menu scrollToPage={(page) => ref!.current!.scrollTo(page)} />
+        </ParallaxLayer>
+
+        {/* Section 2 */}
         <Section2 />
 
         {/*  */}
