@@ -1,4 +1,5 @@
 import { css } from "@emotion/react"
+import { bp } from "../../utils"
 
 export const style = () => {
   return css`
@@ -11,19 +12,25 @@ export const style = () => {
     flex-wrap: wrap;
     font-size: 0.7rem;
     justify-content: center;
-    /* background-color: #61dafb20; */
     height: 100%;
+
+    ${bp.phone} {
+      justify-content: space-evenly;
+    }
 
     li {
       text-align: center;
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-left: 0.35rem;
-      margin-left: 0.35rem;
       font-weight: 500;
       margin-left: 1.75rem;
       margin-right: 1.75rem;
+      ${bp.tablet} {
+        margin-left: 0.3rem;
+        margin-right: 0.3rem;
+      }
+
       div {
         border-radius: 0.5rem;
         background: #08081030;
@@ -36,6 +43,10 @@ export const style = () => {
         transition: 0.1s;
         :hover {
           background: #51f6ffdd;
+        }
+        ${bp.tablet} {
+          padding-left: 0rem;
+          padding-right: 0rem;
         }
         .imgContainer {
           background-color: transparent;

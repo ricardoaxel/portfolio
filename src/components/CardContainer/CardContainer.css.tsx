@@ -1,12 +1,17 @@
 import { css } from "@emotion/react"
+import { useWindowSize } from "../../hooks/useWindowSize"
+import { dimensions } from "../../utils"
 
 export const style = () => {
+  const windowSize = useWindowSize()
+
   return css`
     background-color: #2e10101f;
     border: 2px solid #61dafb;
     border-radius: 0.75rem;
     transition: 0.4s;
     width: 100%;
+    /* ${`${windowSize.width < dimensions.tablet ? "height: 20%" : ""}`}; */
     box-shadow: 0px 5px 6px 1px #dbf5fc95;
     color: white;
     .contentArea {

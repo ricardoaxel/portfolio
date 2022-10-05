@@ -1,7 +1,8 @@
 import { style } from "./MainSection.css"
 import { reactLogo } from "../../assets/Images"
+import { Size } from "../../hooks/useWindowSize"
 
-export const MainSection = () => {
+export const MainSection = ({ windowSize }: { windowSize: Size }) => {
   return (
     <>
       <div css={style}>
@@ -12,6 +13,13 @@ export const MainSection = () => {
             <img id="reactLogo" src={reactLogo} alt="" />
             <h1>React Developer</h1>
           </div>
+
+          <p id="description">
+            React Native & Web Developer with around 5 years of experience in
+            designing and developing user interfaces. <br />
+            Passionate about transforming UI/UX ideas into code. Use of clean
+            code practices and agile development on both small and large teams
+          </p>
         </div>
       </div>
     </>

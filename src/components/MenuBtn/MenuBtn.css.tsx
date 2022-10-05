@@ -1,12 +1,12 @@
 import { css } from "@emotion/react"
+import { bp } from "../../utils"
 
 export const style = () => {
   return css`
-    /* background: #eefafd20; */
     background: transparent;
-    border: 1.9px solid #61dafb;
+    border: none;
     color: #e1f8ff;
-    border-radius: 4px;
+    border-radius: 3px;
     padding: 1.5rem 2.75rem 1.5rem 2.75rem;
     font-weight: 700;
     font-size: 1.1rem;
@@ -15,10 +15,26 @@ export const style = () => {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-bottom: 1px solid whitesmoke;
     cursor: pointer;
-    :hover {
+    :hover :focus {
       background: #4bdce4;
       padding: 1.25rem 3.5rem 1.25rem 3.5rem;
+    }
+    ${bp.tablet} {
+      padding: 1rem 1.7rem 1rem 1.7rem;
+      :hover :focus {
+        background: #4bdce4;
+        padding: 1rem 1.7rem 1rem 1.7rem;
+      }
+    }
+    ${bp.phone} {
+      padding: 0.8rem 0.5rem 0.8rem 0.5rem;
+      font-size: 0.9rem;
+      :hover :focus {
+        background: #4bdce4;
+        padding: 0.8rem 0.5rem 0.8rem 0.5rem;
+      }
     }
     svg {
       font-size: 1.2rem;
