@@ -17,7 +17,7 @@ export const Section3 = ({ windowSize }: { windowSize: Size }) => {
   return (
     <div css={style}>
       <h2>Work experience</h2>
-      <ul>
+      <ul id="experienceList">
         <ExperienceContainer />
         <ExperienceContainer />
       </ul>

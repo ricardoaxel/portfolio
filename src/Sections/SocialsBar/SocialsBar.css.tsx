@@ -4,7 +4,6 @@ import { bp } from "../../utils"
 export const style = () => {
   return css`
     /* background-color: #989ac021; */
-
     width: 100%;
     height: 100%;
     padding: 0;

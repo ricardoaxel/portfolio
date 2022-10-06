@@ -21,7 +21,7 @@ export const style = () => {
     flex-direction: column;
 
     padding: ${separation} 4rem;
-    ul {
+    #experienceList {
       list-style-type: none;
       margin: 0;
       padding: 0;

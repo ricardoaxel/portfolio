@@ -1,6 +1,6 @@
 import { css } from "@emotion/react"
 
-export const style = () => {
+export const style = (openDetail) => {
   return css`
     color: white;
     width: 100%;
@@ -88,22 +88,90 @@ export const style = () => {
       }
     }
     #content {
-      margin-top: 2rem;
+      margin-top: 1rem;
       display: flex;
       .subSideContent {
         text-align: justify;
+        h4 {
+          font-size: 0.9rem;
+        }
       }
+
       #description {
         margin-right: 2rem;
+        width: 70%;
+        list-style-type: disc;
+        /* background-color: red; */
+        padding-bottom: 1rem;
+        ul {
+          list-style-type: none;
+          padding-top: 0.5rem;
+          margin: 0;
+          margin-left: -0.1rem;
+          padding-left: 0rem;
+          display: flex;
+          flex-direction: column;
+          li {
+            padding: 0rem;
+            display: flex;
+            padding-bottom: 0.6rem;
+            align-items: center;
+            svg {
+              padding-right: 0.5rem;
+            }
+          }
+        }
       }
       #projects {
+        width: 50%;
+
+        ul {
+          list-style-type: none;
+          padding-top: 0.5rem;
+          margin: 0;
+          margin-left: -0.1rem;
+          padding-left: 0rem;
+          display: flex;
+          flex-direction: column;
+          li {
+            padding: 0rem;
+            /* display: flex; */
+            padding-bottom: 0.6rem;
+            align-items: center;
+            background-color: #28c9f5;
+            padding: 1rem 0.8rem;
+            margin-bottom: 1rem;
+            border-radius: 4px;
+            color: #2c448d;
+            h5 {
+              font-size: 0.8rem;
+              color: #010308;
+            }
+            svg {
+              padding-right: 0.5rem;
+            }
+          }
+        }
       }
     }
     button {
       position: absolute;
       width: 2rem;
       margin-left: calc(50% - 2rem);
-      bottom: 0.25rem;
+      bottom: 0.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: none;
+      border: none;
+      color: #61dafb;
+      font-size: 1.5rem;
+      transform: ${`${openDetail ? "rotate(180deg)" : ""}`};
+      cursor: pointer;
+      transition: transform 0.75s, font-size 0.3s;
+      :hover {
+        font-size: 1.75rem;
+      }
     }
   `
 }
