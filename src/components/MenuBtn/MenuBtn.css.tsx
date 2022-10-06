@@ -17,14 +17,16 @@ export const style = () => {
     align-items: center;
     border-bottom: 1px solid whitesmoke;
     cursor: pointer;
-    :hover :focus {
-      background: #4bdce4;
-      padding: 1.25rem 3.5rem 1.25rem 3.5rem;
+    :hover,
+    :active {
+      color: #61dafb;
+      border-bottom: 1px solid #61dafb;
+      padding: 1.75rem 4rem 1.75rem 4rem;
     }
     ${bp.tablet} {
       padding: 1rem 1.7rem 1rem 1.7rem;
-      :hover :focus {
-        background: #4bdce4;
+      :hover,
+      :active {
         padding: 1rem 1.7rem 1rem 1.7rem;
       }
     }
@@ -32,7 +34,6 @@ export const style = () => {
       padding: 0.8rem 0.5rem 0.8rem 0.5rem;
       font-size: 0.9rem;
       :hover :focus {
-        background: #4bdce4;
         padding: 0.8rem 0.5rem 0.8rem 0.5rem;
       }
     }

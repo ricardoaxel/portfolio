@@ -4,7 +4,7 @@ import { style } from "./Section2.css"
 import { FrontendDevTools } from "../../components/FrontendDevTools/FrontendDevTools"
 import { TechnologiesStack } from "../../components/TechnologiesStack/TechnologiesStack"
 import { Size } from "../../hooks/useWindowSize"
-import { dimensions } from "../../utils"
+import { dimensions, menuHeight } from "../../utils"
 export const Section2 = ({ windowSize }: { windowSize: Size }) => {
   let isPC = windowSize.width > dimensions.tablet
   let factor =
@@ -18,7 +18,7 @@ export const Section2 = ({ windowSize }: { windowSize: Size }) => {
       {/* Card 1: Technologies */}
       <ParallaxLayer
         offset={1}
-        speed={2}
+        speed={isPC ? 2 : 2}
         factor={factor}
         style={{
           display: "flex",
@@ -28,7 +28,7 @@ export const Section2 = ({ windowSize }: { windowSize: Size }) => {
           marginRight: isPC ? "0%" : "3%",
           alignItems: isPC ? "center" : "flex-start",
           position: "absolute",
-          marginTop: isPC ? "0rem" : "8rem",
+          marginTop: isPC ? "0rem" : menuHeight,
         }}
       >
         <CardContainer className={"card1"}>
@@ -39,7 +39,7 @@ export const Section2 = ({ windowSize }: { windowSize: Size }) => {
       {/* Card 2: React Stack */}
       <ParallaxLayer
         offset={1}
-        speed={2}
+        speed={isPC ? 0.75 : 2}
         factor={factor}
         style={{
           display: "flex",
@@ -47,7 +47,7 @@ export const Section2 = ({ windowSize }: { windowSize: Size }) => {
           marginLeft: isPC ? "31%" : "3%",
           alignItems: isPC ? "center" : "center",
           position: "absolute",
-          marginTop: isPC ? "0rem" : "8rem",
+          marginTop: isPC ? "0rem" : menuHeight,
         }}
       >
         <CardContainer className={"card2"}>
@@ -58,7 +58,7 @@ export const Section2 = ({ windowSize }: { windowSize: Size }) => {
       {/* Card 3: Frontend DevTools*/}
       <ParallaxLayer
         offset={1}
-        speed={2}
+        speed={isPC ? 2 : 2}
         factor={factor}
         style={{
           display: "flex",
@@ -66,7 +66,7 @@ export const Section2 = ({ windowSize }: { windowSize: Size }) => {
           marginLeft: isPC ? "72%" : "3%",
           alignItems: isPC ? "center" : "flex-end",
           position: "absolute",
-          marginTop: isPC ? "0rem" : "8rem",
+          marginTop: isPC ? "0rem" : menuHeight,
         }}
       >
         <CardContainer className={"card3"}>

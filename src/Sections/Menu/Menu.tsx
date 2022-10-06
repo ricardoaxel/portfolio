@@ -29,7 +29,7 @@ export const Menu = ({ scrollToPage }: Props) => {
       <li>
         {" "}
         <MenuBtn
-          value={"Contact"}
+          value={"Projects"}
           icon={<AiOutlineMail />}
           onClick={() => scrollToPage(3)}
         />

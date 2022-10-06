@@ -1,9 +1,11 @@
 import { GeneralLayout } from "./Layouts/GeneralLayout"
-import { MainSection, Section2, Menu } from "./Sections"
+import { MainSection, Section2, Menu, SocialsBar } from "./Sections"
 import { Parallax, ParallaxLayer } from "@react-spring/parallax"
 import { me } from "./assets/Images"
 import { useRef, useState, useEffect } from "react"
 import { useWindowSize } from "./hooks"
+import { Section3 } from "./Sections/Section3/Section3"
+import { menuHeight } from "./utils"
 
 // Hook
 
@@ -40,7 +42,7 @@ export const App = () => {
 
         {/* Section 1: MAIN */}
 
-        <ParallaxLayer speed={2} offset={0} factor={1}>
+        <ParallaxLayer speed={0.5} offset={0} factor={1}>
           <MainSection windowSize={windowSize} />
         </ParallaxLayer>
 
@@ -51,10 +53,26 @@ export const App = () => {
           sticky={{ start: 0.63, end: 4 }}
           style={{
             position: "absolute",
-            height: "8rem",
+            height: menuHeight,
           }}
         >
           <Menu scrollToPage={(page) => ref!.current!.scrollTo(page)} />
+        </ParallaxLayer>
+
+        {/* SOCIAL */}
+        <ParallaxLayer
+          speed={0.1}
+          factor={1}
+          // offset={0}
+          // sticky={{ start: 0, end: 0 }}
+          style={{
+            position: "absolute",
+            height: "100%",
+            width: "3.25rem",
+            // background: "red",
+          }}
+        >
+          <SocialsBar />
         </ParallaxLayer>
 
         {/* Section 2: STACK */}
@@ -62,7 +80,7 @@ export const App = () => {
 
         {/*  */}
         <ParallaxLayer offset={2} speed={0.5}>
-          <h1>Layer3</h1>
+          <Section3 windowSize={windowSize} />
         </ParallaxLayer>
         <ParallaxLayer offset={3} speed={0.5}>
           <h1>Layer4</h1>

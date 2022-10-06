@@ -16,9 +16,8 @@ export const MainSection = ({ windowSize }: { windowSize: Size }) => {
 
           <p id="description">
             React Native & Web Developer with around 5 years of experience in
-            designing and developing user interfaces. <br />
-            Passionate about transforming UI/UX ideas into code. Use of clean
-            code practices and agile development on both small and large teams
+            designing and developing user interfaces. <br /> <br />
+            Passionate about transforming UI/UX ideas into code.
           </p>
         </div>
       </div>

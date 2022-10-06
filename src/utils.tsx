@@ -17,4 +17,6 @@ Object.entries(dimensions).forEach(([key, value]) => {
   bp[key as keyof bpTypes] = `@media (max-width: ${value}px)`
 })
 
-export { dimensions, bp }
+const menuHeight = "8rem"
+
+export { dimensions, bp, menuHeight }
