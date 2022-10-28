@@ -83,7 +83,7 @@ export const App = () => {
           <Section3 windowSize={windowSize} />
         </ParallaxLayer>
         <ParallaxLayer offset={3} speed={0.5}>
-          <h1>Layer4</h1>
+          <h1>Layesr4</h1>
         </ParallaxLayer>
       </Parallax>
     </GeneralLayout>
