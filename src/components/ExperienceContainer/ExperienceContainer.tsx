@@ -4,22 +4,41 @@ import AnimateHeight from "react-animate-height"
 import { IoIosArrowDown } from "react-icons/io"
 import { CgEditBlackPoint } from "react-icons/cg"
 
-interface Props {
-  className?: string
+type project = {
+  title: string
+  description: string
 }
 
-export const ExperienceContainer = ({ className }: Props) => {
+interface Props {
+  className?: string
+  key: string | number
+  achievements: string[]
+  projects: project[]
+  title: string
+  company: string
+  date: string
+}
+
+export const ExperienceContainer = ({
+  className,
+  key,
+  achievements,
+  projects,
+  title,
+  company,
+  date,
+}: Props) => {
   const [openDetail, setOpenDetail] = useState(false)
   return (
-    <li css={style(openDetail)} className={className}>
+    <li css={style(openDetail)} key={key} className={className}>
       <AnimateHeight duration={500} height={openDetail ? "auto" : 45}>
         <div id="topSec">
           <div id="leftSide">
-            <h3>React Developer</h3>
-            <p id="company">Let's Go Eat - Lawrenceville, GA</p>
+            <h3>{title}</h3>
+            <p id="company">{company}</p>
           </div>
           <div id="rightSide">
-            <p> 2022-07 - Present</p>
+            <p>{date}</p>
           </div>
         </div>
 
@@ -27,40 +46,23 @@ export const ExperienceContainer = ({ className }: Props) => {
           <div id="description" className="subSideContent">
             <h4>Achievements</h4>
             <ul>
-              <li>
-                <CgEditBlackPoint />
-                Developed a React Native application for customer orders
-              </li>
-              <li>
-                <CgEditBlackPoint />
-                Developed a React Native application for customer orders
-              </li>
-              <li>
-                <CgEditBlackPoint />
-                Developed a React Native application for customer orders
-              </li>
-              <li>
-                <CgEditBlackPoint />
-                Developed a React Native application for customer orders
-              </li>
-              <li>
-                <CgEditBlackPoint />
-                Developed a React Native application for customer orders
-              </li>
-              <li>
-                <CgEditBlackPoint />
-                Developed a React Native application for customer orders
-              </li>
+              {achievements.map((achievement) => (
+                <li key={achievement}>
+                  <CgEditBlackPoint />
+                  {achievement}
+                </li>
+              ))}
             </ul>
           </div>
           <div id="projects" className="subSideContent">
             <h4>Projects</h4>
             <ul>
-              <li>
-                <h5>LINDA</h5>
-                <p>Handled photo management with help of react-image-picker</p>
-              </li>
-              <li>Handled photo management with help of react-image-picker</li>
+              {projects.map((project) => (
+                <li key={project.title}>
+                  <h5>{project.title}</h5>
+                  <p>{project.description}</p>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

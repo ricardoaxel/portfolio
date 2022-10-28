@@ -18,7 +18,7 @@ export const style = () => {
       margin: 1rem;
       width: calc(100% - 2rem);
       height: calc(100% - 2rem);
-      background-color: #61dafb10;
+      /* background-color: #61dafb10; */
       border-radius: 0.5rem;
       padding-top: 0.25rem;
       padding-bottom: 0.25rem;

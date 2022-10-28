@@ -6,6 +6,8 @@ import { TechnologiesStack } from "../../components/TechnologiesStack/Technologi
 import { Size } from "../../hooks/useWindowSize"
 import { dimensions } from "../../utils"
 import { ExperienceContainer } from "../../components/ExperienceContainer/ExperienceContainer"
+import { experiences } from "./experiences"
+
 export const Section3 = ({ windowSize }: { windowSize: Size }) => {
   let isPC = windowSize.width > dimensions.tablet
   let factor =
@@ -18,8 +20,16 @@ export const Section3 = ({ windowSize }: { windowSize: Size }) => {
     <div css={style}>
       <h2>Work experience</h2>
       <ul id="experienceList">
-        <ExperienceContainer />
-        <ExperienceContainer />
+        {experiences.map((experience, index) => (
+          <ExperienceContainer
+            key={index}
+            title={experience.title}
+            company={experience.company}
+            achievements={experience.achievements}
+            projects={experience.projects}
+            date={experience.date}
+          />
+        ))}
       </ul>
 
       {/* <ProjectsContainer /> */}
